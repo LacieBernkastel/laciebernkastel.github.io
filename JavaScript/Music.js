@@ -19,7 +19,7 @@ function circle(x, y, canvas, factor)
     canvas2dContext.strokeStyle = 'rgb(' +Math.floor(255 - 20 * factor * 4) + ',0,' + Math.floor(255 - 20 * factor * 2) + ')';
     canvas2dContext.lineWidth = 5;
     canvas2dContext.beginPath();
-    canvas2dContext.arc(x, y, 100, 0, factor*2*Math.PI, false);
+    canvas2dContext.arc(x, y, 100, - (Math.PI / 2), (factor*2*Math.PI) - (Math.PI / 2), false);
     canvas2dContext.stroke();
 }
 

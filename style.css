@@ -11,6 +11,10 @@
   src: url('Fonts/Cabin-Regular.ttf') format('truetype');
 }
 
+nav, aside, article, footer {
+  border-radius: 10px;
+}
+
 html, body {
   margin: 0;
   padding: 0;
