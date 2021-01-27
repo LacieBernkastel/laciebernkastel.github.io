@@ -16,8 +16,6 @@ function play(){
 function circle(x, y, canvas, factor)
 {
 	let canvas2dContext = canvas.getContext("2d");
-
-    console.log(factor);
     canvas2dContext.strokeStyle = 'rgb(' +Math.floor(255 - 20 * factor * 4) + ',0,' + Math.floor(255 - 20 * factor * 2) + ')';
     canvas2dContext.lineWidth = 5;
     canvas2dContext.beginPath();
@@ -26,5 +24,4 @@ function circle(x, y, canvas, factor)
 }
 
 v.addEventListener("timeupdate", function(){ 
-    console.log("cc");
     circle(150, 130, canvas, v.currentTime/v.duration) });
