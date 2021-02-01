@@ -1,6 +1,7 @@
 var v = document.getElementsByTagName("audio")[0];
 var canvas = document.getElementsByTagName("canvas")[0];
 
+
 v.addEventListener("canplay", function(){ v.play; }, true);
 
 function pause(){
