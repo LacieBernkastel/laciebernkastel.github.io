@@ -1,8 +1,6 @@
 importScripts('Point.js');
 
 let intervalID = setInterval(sendMessage, 1000);
-const result;
-
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -14,7 +12,7 @@ onmessage = function(e) {
 }
 
 function sendMessage(){
-    let point = new Point(getRandomIntInclusive(20, 580), getRandomIntInclusive(20, 580));
+    const result = new Point(getRandomIntInclusive(20, 580), getRandomIntInclusive(20, 580));
     const workerResult = 'Result: ' + result;
     console.log('Worker: Posting message back to main script');
     postMessage(workerResult);
