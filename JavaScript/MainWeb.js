@@ -1,4 +1,3 @@
-let intervalID = window.setInterval(sendMessage, 1000);
 let canvas = document.getElementsByTagName("canvas")[0];
 let canvas2dContext = canvas.getContext("2d");
 const result = document.querySelector('.result');
@@ -7,7 +6,7 @@ const result = document.querySelector('.result');
 if (window.Worker) {
 	const myWorker = new Worker("Worker.js");
 
-    sendMessage(myWorker);
+    myWorker.postMessage(point);
 
 	myWorker.onmessage = function(e) {
 		result.textContent = drawCircle(e.data);
@@ -16,10 +15,6 @@ if (window.Worker) {
 
 } else {
 	console.log('Your browser doesn\'t support web workers.')
-}
-
-function sendMessage(myWorker){
-    myWorker.postMessage(point)
 }
 
 function drawCircle(data){
