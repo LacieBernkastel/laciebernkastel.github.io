@@ -7,7 +7,7 @@ const result = document.querySelector('.result');
 if (window.Worker) {
 	const myWorker = new Worker("Worker.js");
 
-    sendMessage();
+    sendMessage(myWorker);
 
 	myWorker.onmessage = function(e) {
 		result.textContent = drawCircle(e.data);
@@ -18,7 +18,7 @@ if (window.Worker) {
 	console.log('Your browser doesn\'t support web workers.')
 }
 
-function sendMessage(){
+function sendMessage(myWorker){
     myWorker.postMessage(point)
 }
 
