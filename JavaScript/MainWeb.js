@@ -7,6 +7,8 @@ const result = document.querySelector('.result');
 if (window.Worker) {
 	const myWorker = new Worker("Worker.js");
 
+    sendMessage();
+
 	myWorker.onmessage = function(e) {
 		result.textContent = drawCircle(e.data);
 		console.log('Message received from worker');
