@@ -20,3 +20,11 @@ onmessage = function(e) {
     console.log('Worker: Posting message back to main script');
     postMessage(workerResult);
 }
+
+class Point{
+
+    constructor(x,y){
+        this.x = x;
+        this.y = y;
+    }
+}
