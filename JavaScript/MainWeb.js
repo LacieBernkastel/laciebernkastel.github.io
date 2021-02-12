@@ -6,7 +6,7 @@ if (window.Worker) {
 
     for(i = 0; i<10; i++){
         const myWorker = new Worker("Worker.js");
-        let color = 'rgb(' + (20*i) + ',' + (255 - (20*i)) + ', 0)';
+        let color = 'rgb(' + (20*i) + ', 0,' + (255 - (20*i)) + ')';
         myWorker.postMessage(color);
         
 
@@ -22,7 +22,7 @@ if (window.Worker) {
 function drawCircle(data){
     console.log(data);
     canvas2dContext.fillStyle = data.color;
-    // canvas2dContext.clearRect(0, 0, canvas.width, canvas.height);
+    canvas2dContext.clearRect(0, 0, canvas.width, canvas.height);
     canvas2dContext.beginPath();
     canvas2dContext.arc(data.x, data.y, 20, 0, (2*Math.PI), false); 
     canvas2dContext.fill();
