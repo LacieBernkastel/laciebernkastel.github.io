@@ -12,7 +12,7 @@ if (window.Worker) {
 
 	    myWorker.onmessage = function(e) {
             drawCircle(e.data);
-            console.log('Message received from worker' + i);
+            console.log('Message received from worker ' + i);
 	    }
     }
 } else {
