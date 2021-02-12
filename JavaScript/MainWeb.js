@@ -8,13 +8,13 @@ if (window.Worker) {
         const myWorker = new Worker("Worker.js");
         let color = 'rgb(' + 20*i + ',' + 255 - (20*i) + ', 0)';
         myWorker.postMessage(color);
-    }
+        
 
-	myWorker.onmessage = function(e) {
+	    myWorker.onmessage = function(e) {
 		drawCircle(e.data);
-		console.log('Message received from worker');
-	}
-
+		console.log('Message received from worker' + i);
+	    }
+    }
 } else {
 	console.log('Your browser doesn\'t support web workers.')
 }
