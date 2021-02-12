@@ -1,4 +1,4 @@
-importScripts('Point.js');
+
 let canvas = document.getElementsByTagName("canvas")[0];
 let canvas2dContext = canvas.getContext("2d");
 const result = document.querySelector('.result');
