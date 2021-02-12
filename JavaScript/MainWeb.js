@@ -22,7 +22,7 @@ if (window.Worker) {
 function drawCircle(data){
     console.log(data);
     canvas2dContext.fillStyle = data.color;
-    canvas2dContext.clearRect(0, 0, canvas.width, canvas.height);
+    // canvas2dContext.clearRect(0, 0, canvas.width, canvas.height);
     canvas2dContext.beginPath();
     canvas2dContext.arc(data.x, data.y, 20, 0, (2*Math.PI), false); 
     canvas2dContext.fill();
