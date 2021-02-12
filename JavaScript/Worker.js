@@ -13,7 +13,6 @@ onmessage = function(e) {
 
 function sendMessage(){
     const result = new Point(getRandomIntInclusive(20, 580), getRandomIntInclusive(20, 580));
-    const workerResult = 'Result: ' + result;
     console.log('Worker: Posting message back to main script');
-    postMessage(workerResult);
+    postMessage(result);
 }
