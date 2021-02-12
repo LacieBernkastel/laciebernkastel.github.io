@@ -11,15 +11,6 @@ function getNewCoordinates(){
     point.y = getRandomIntInclusive(20,500);
 }
 
-
-class Point{
-
-    constructor(x,y){
-        this.x = x;
-        this.y = y;
-    }
-}
-
 let point = new Point(50,50);
 
 onmessage = function(e) {
