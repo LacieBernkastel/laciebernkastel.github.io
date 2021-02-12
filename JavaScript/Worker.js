@@ -1,4 +1,3 @@
-let intervalID = setInterval(getNewCoordinates, 1000);
 
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
@@ -7,24 +6,15 @@ function getRandomIntInclusive(min, max) {
 }
 
 function getNewCoordinates(){
-    point.x = getRandomIntInclusive(20, 580);
-    point.y = getRandomIntInclusive(20,500);
+    e.x = getRandomIntInclusive(20, 580);
+    e.y = getRandomIntInclusive(20,500);
 }
-
-let point = new Point(50,50);
 
 onmessage = function(e) {
     console.log('Worker: Message received from main script');
+    getNewCoordinates();
     const result = point;
     const workerResult = 'Result: ' + result;
     console.log('Worker: Posting message back to main script');
     postMessage(workerResult);
-}
-
-class Point{
-
-    constructor(x,y){
-        this.x = x;
-        this.y = y;
-    }
 }

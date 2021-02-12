@@ -1,3 +1,4 @@
+let intervalID = window.setInterval(sendMessage, 1000);
 let canvas = document.getElementsByTagName("canvas")[0];
 let canvas2dContext = canvas.getContext("2d");
 const result = document.querySelector('.result');
@@ -13,6 +14,10 @@ if (window.Worker) {
 
 } else {
 	console.log('Your browser doesn\'t support web workers.')
+}
+
+function sendMessage(){
+    myWorker.postMessage(point)
 }
 
 function drawCircle(data){
@@ -32,3 +37,5 @@ class Point{
         this.y = y;
     }
 }
+
+let point = new Point(50,50);
