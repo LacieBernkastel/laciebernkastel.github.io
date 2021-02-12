@@ -11,8 +11,8 @@ if (window.Worker) {
         
 
 	    myWorker.onmessage = function(e) {
-		drawCircle(e.data);
-		console.log('Message received from worker' + i);
+            drawCircle(e.data);
+            console.log('Message received from worker' + i);
 	    }
     }
 } else {
@@ -21,7 +21,7 @@ if (window.Worker) {
 
 function drawCircle(data){
     console.log(data);
-    canvas2dContext.fillStyle = 'rgb(255,0,0)';
+    canvas2dContext.fillStyle = data.color;
     canvas2dContext.clearRect(0, 0, canvas.width, canvas.height);
     canvas2dContext.beginPath();
     canvas2dContext.arc(data.x, data.y, 20, 0, (2*Math.PI), false); 
