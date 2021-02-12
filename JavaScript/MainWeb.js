@@ -1,13 +1,12 @@
 
 let canvas = document.getElementsByTagName("canvas")[0];
 let canvas2dContext = canvas.getContext("2d");
-const result = document.querySelector('.result');
 
 if (window.Worker) {
 	const myWorker = new Worker("Worker.js");
 
 	myWorker.onmessage = function(e) {
-		result.textContent = drawCircle(e.data);
+		drawCircle(e.data);
 		console.log('Message received from worker');
 	}
 
@@ -22,5 +21,5 @@ function drawCircle(data){
     canvas2dContext.beginPath();
     canvas2dContext.arc(data.x, data.y, 20, 0, (2*Math.PI), false); 
     canvas2dContext.fill();
-
+    
 }
