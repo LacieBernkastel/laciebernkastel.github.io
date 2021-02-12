@@ -6,7 +6,7 @@ if (window.Worker) {
 
     for(i = 0; i<10; i++){
         const myWorker = new Worker("Worker.js");
-        let color = 'rgb(' + 20*i + ',' + 255 - (20*i) + ', 0)';
+        let color = 'rgb(' + (20*i) + ',' + (255 - (20*i)) + ', 0)';
         myWorker.postMessage(color);
         
 
