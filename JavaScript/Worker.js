@@ -1,4 +1,4 @@
-let intervalID = setInterval(getNewCoordinates, 1000, callback);
+let intervalID = setInterval(getNewCoordinates, 1000);
 let point = new Point(50,50);
 
 onmessage = function(e) {
