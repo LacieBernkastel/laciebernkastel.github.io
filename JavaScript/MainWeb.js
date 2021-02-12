@@ -3,7 +3,12 @@ let canvas = document.getElementsByTagName("canvas")[0];
 let canvas2dContext = canvas.getContext("2d");
 
 if (window.Worker) {
-	const myWorker = new Worker("Worker.js");
+
+    for(i = 0; i<10; i++){
+        const myWorker = new Worker("Worker.js");
+        let color = 'rgb(' + 20*i + ',' + 255 - (20*i) + ', 0)';
+        myWorker.postMessage(color);
+    }
 
 	myWorker.onmessage = function(e) {
 		drawCircle(e.data);
