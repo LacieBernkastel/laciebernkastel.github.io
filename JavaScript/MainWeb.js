@@ -1,12 +1,10 @@
+importScripts('Point.js');
 let canvas = document.getElementsByTagName("canvas")[0];
 let canvas2dContext = canvas.getContext("2d");
 const result = document.querySelector('.result');
 
-
 if (window.Worker) {
 	const myWorker = new Worker("Worker.js");
-
-    myWorker.postMessage(point);
 
 	myWorker.onmessage = function(e) {
 		result.textContent = drawCircle(e.data);
@@ -26,13 +24,3 @@ function drawCircle(data){
     canvas2dContext.fill();
 
 }
-
-class Point{
-
-    constructor(x,y){
-        this.x = x;
-        this.y = y;
-    }
-}
-
-let point = new Point(50,50);
