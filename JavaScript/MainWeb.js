@@ -15,7 +15,7 @@ if (window.Worker) {
 }
 
 function drawCircle(data){
-    
+    console.log(data);
     canvas2dContext.fillStyle = 'rgb(255,0,0)';
     canvas2dContext.clearRect(0, 0, canvas.width, canvas.height);
     canvas2dContext.beginPath();
