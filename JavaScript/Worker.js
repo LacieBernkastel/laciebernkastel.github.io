@@ -19,3 +19,12 @@ function getNewCoordinates(){
     point.x = getRandomIntInclusive(20, 580);
     point.y = getRandomIntInclusive(20,500);
 }
+
+
+class Point{
+
+    constructor(x,y){
+        this.x = x;
+        this.y = y;
+    }
+}

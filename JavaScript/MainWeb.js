@@ -24,11 +24,3 @@ function drawCircle(data){
     canvas2dContext.fill();
 
 }
-
-class Point{
-
-    constructor(x,y){
-        this.x = x;
-        this.y = y;
-    }
-}
