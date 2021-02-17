@@ -22,7 +22,7 @@ html, body {
 
 html {
   font-size: 10px;
-  background-color: #a9a9a9;
+  background-color: #f8eff5;
 }
 
 body {
@@ -41,7 +41,7 @@ h1 {
   font-size: 4rem;
   text-align: center;
   color: white;
-  text-shadow: 2px 2px 10px black;
+  text-shadow: 0px 0px 5px #e66283;
   font-family: 'Cheeky_Rabbit','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -72,7 +72,7 @@ nav, article, aside, footer {
 
 nav {
   height: 50px;
-  background-color:#8532a8;
+  background-color:#e66283;
   display: flex;
   margin-bottom: 10px;
 }
@@ -146,7 +146,7 @@ figcaption{
 aside {
   flex: 1;
   margin-left: 10px;
-  background-color: #8532a8;
+  background-color: #e66283;
 }
 
 aside a, li {
@@ -160,4 +160,10 @@ aside h2 {
 
 footer {
   margin-top: 10px;
+}
+
+form, .linkDisplay, .scheduleDisplay {
+  font-size:medium;
+  color:#2a2a2a;
+  font-family: 'Cabin';
 }
