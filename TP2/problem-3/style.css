@@ -1,0 +1,67 @@
+/* || General setup */
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #2a2a2a;
+}
+
+body {
+  width: 80%;
+  margin: auto;
+  padding-top: 10vh;
+}
+
+
+
+article, aside{
+  background-color: white;
+  padding: 1%;
+  margin: 0 10vw;
+}
+
+input {
+  width: 40%;
+  height: 3vh;
+  margin: 2vw 2vh;
+}
+
+
+main {
+  display: flex;
+}
+
+table{
+  width: 100%;
+  border: black solid 1px;
+  border-collapse: collapse;
+}
+
+td{
+  border: black solid 1px;
+  padding: 1vw;
+}
+
+article {
+  flex: 4;
+}
+
+aside {
+  flex: 1;
+  margin-left: 10px;
+}
+
+#avatar{
+  max-width: 300px;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+#userProfile{
+  font-weight: bold;
+}

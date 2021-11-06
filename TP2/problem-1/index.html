@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Problem 1</title>
+        <link rel="stylesheet" href="style.css"/>
+        <meta name="viewport" content="width=device-width, height=auto, initial-scale=1"></meta>
+    </head>
+
+<body>
+        <h2>Phone directory application</h2>
+        
+        <form name="contact" method="post" onsubmit="addContact()">
+
+            <input type="text" name="contactName" id="name" placeholder="Contact Name" maxlength="20" onkeypress="return /[a-z, ]/i.test(event.key)" required>
+            <input type="text" name="contactMobile" id="mobile" placeholder="Mobile Number" maxlength="10" pattern="\d{10}" required>
+            <input type="email" name="contactMail" id="mail" placeholder="Email" maxlength="40" required>
+            <input type="submit" value="Add Contact">
+
+        </form>
+
+        <div id="error" style="visibility: hidden">Error</div>
+
+        <div id="search" style="margin-bottom: 8vh;">
+            Search contact by Mobile No: 
+            <input type="text" name="mobileSearch" id="mobileSearch" maxlength="10" pattern="\d{10}">
+        </div>
+
+        <div id="noResult" style="visibility: hidden;">No result</div>
+        <br>
+
+        <div id="contactList">
+            <table title="Contacts Summary" rules="ALL">
+                <thead>
+                    <tr>
+                        <th scope="col" onclick="showContactList(true)" style="cursor: pointer">Name</th>
+                        <th scope="col">Mobile</th>
+                        <th scope="col">Email</th>
+                    </tr>
+                </thead>
+
+                <tbody id="contactListBody">
+
+                </tbody>
+            </table>
+        </div>
+    
+    <script src="contactManagement.js"></script>
+</body>
+
+</html>

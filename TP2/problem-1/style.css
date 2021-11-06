@@ -1,0 +1,26 @@
+html{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+form{
+    background-color: powderblue;
+    border-radius: 10px;
+    border: solid 2px skyblue;
+    padding: 3vw 2vh;
+    margin: 5vw;
+    text-align: center;
+}
+
+table{
+    border: solid black 1px;
+    padding: 1vw 1vh;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td{
+    text-align: center;
+    overflow: auto;
+}
