@@ -1,7 +1,11 @@
 // The initial account displayed when opening the index.html is used as a placeholder.
 
-
 let input = document.getElementById("usernameSearch");
+input.addEventListener('keydown', function(e) {
+    if(e.key === "Enter"){
+        search();
+    }
+})
 
 // Get all users
 fetch('https://api.github.com/users')

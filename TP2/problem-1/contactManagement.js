@@ -1,9 +1,19 @@
 class Contact{
+
     constructor(name, mobile, email){
         this.name = name;
         this.mobile = mobile;
         this.email = email;
     }
+}
+
+// Getting all the contacts already stored
+let datas = localStorage.getItem("contactInfo");
+if(datas == null){
+    datasObj = [];
+}
+else{
+    datasObj = JSON.parse(datas);
 }
 
 
@@ -27,20 +37,10 @@ function addContact(){
 
     let newContact = new Contact(dataName, dataMobile, dataMail);
 
-    // Getting all the contacts already stored
-    let datas = localStorage.getItem("contactInfo");
-    if(datas == null){
-        datasObj = [];
-    }
-    else{
-        datasObj = JSON.parse(datas);
-    }
-
     // Adding the contact to the storage
     datasObj.push(newContact);
     localStorage.setItem("contactInfo", JSON.stringify(datasObj));
-
-
+    showContactList(false);
 }
 
 
@@ -68,20 +68,13 @@ let toggle = 0;
 
 function showContactList(sorted){
     
-    let datas = localStorage.getItem("contactInfo");
-    
-    if(datas == null){
-        datasObj = [];
-    }
-    else{
-        datasObj = JSON.parse(datas);
-        if(sorted){
-            toggle++;
-            if(toggle % 2 == 1){
-                datasObj.sort(compare);
-            }
+    if(sorted){
+        toggle++;
+        if(toggle % 2 == 1){
+            datasObj.sort(compare);
         }
     }
+    
     let html = "";
 
     let contactList = document.getElementById("contactListBody");
